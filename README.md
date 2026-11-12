@@ -21,7 +21,6 @@ Paket **Soal Tugas 2, UTS Temu Kembali Informasi** berisi 50 putusan Pengadilan 
 - Pengadilan: **Pengadilan Negeri Pontianak** (`PN Ptk`).
 - Cakupan isi: pidana khusus, narkotika dan psikotropika.
 - Bahasa: Indonesia.
-- Revisi tabel: 12 November 2026.
 - Akuisisi: 50 PDF disediakan oleh penyusun; isi PDF disimpan utuh. Penamaan berkas di dalam arsip diseragamkan.
 
 ## Struktur repositori
