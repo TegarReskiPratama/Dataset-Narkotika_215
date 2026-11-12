@@ -6,7 +6,7 @@
 
 Seluruh 50 entri berikut berasal dari lembar **Overview** dalam file Excel. Kelima kolom ditampilkan lengkap, termasuk seluruh rincian barang bukti dan amar putusan.
 
-GitHub menampilkan file `.xlsx` sebagai berkas unduhan. Gunakan tabel di halaman ini untuk membaca isinya langsung di GitHub, atau gunakan tautan unduh di atas untuk membuka file dengan Excel.
+
 
 ## Seluruh data putusan 1-50
 
