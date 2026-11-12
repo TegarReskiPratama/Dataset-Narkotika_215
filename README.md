@@ -43,6 +43,37 @@ Dataset-Narkotika_215/
 
 `Narkotika.zip` memuat folder `Narkotika/2023`, `Narkotika/2024`, dan `Narkotika/2025`. Nama berkas mengikuti pola `<nomor>_Pid.Sus_<tahun>_PN_Ptk.pdf`. Manifest mencatat pemetaan nama asli, lokasi dalam arsip, ukuran, dan checksum setiap PDF.
 
+## Sumber dan pengolahan
+
+1. Dokumen sumber: [Direktori Putusan Mahkamah Agung RI](https://putusan3.mahkamahagung.go.id/). URL setiap perkara diekstrak dari QR pada PDF.
+2. Teks PDF diekstrak langsung untuk 32 berkas; 18 berkas gambar dibaca menggunakan OCR.
+3. Amar akhir 50 perkara dicocokkan melalui [SIPP PN Pontianak](https://sipp.pn-pontianak.go.id/) menggunakan nomor putusan yang sesuai.
+4. Kolom Barang Bukti diambil dari daftar dalam amar hakim, sehingga tidak mencampurkan barang pada tuntutan atau perkara lain.
+5. Spasi dan pemisah paragraf dirapikan. Rincian daftar barang bukti serta butir amar dipertahankan; daftar panjang tetap disertakan.
+
+PDF sumber tetap menjadi acuan naskah lengkap. Ketidakkonsistenan angka atau redaksi yang memang terdapat pada sumber tidak diganti berdasarkan perkiraan. Catatan per perkara tersedia di [Sumber_Putusan.md](Dokumentasi/Sumber_Putusan.md).
+
+## Integritas arsip
+
+- Jumlah: **50 PDF unik**.
+- Ukuran: **303.08 MB**.
+- Pemeriksaan CRC arsip dan kecocokan SHA-256 tiap PDF dengan dokumen asal telah dilakukan.
+- SHA-256 `Dataset/Narkotika.zip`:
+
+```text
+e6c5ad0cd3344951034bf6ed2746d6676e35a572ea7c29cf3073f4ce421cf457
+```
+
+## Cara mengunduh
+
+1. Buka [Dataset/Narkotika.zip](Dataset/Narkotika.zip) dan gunakan tombol unduh berkas untuk memperoleh arsip PDF asli.
+2. Ekstrak arsip, lalu cocokkan nomor perkara dengan tabel Excel.
+3. Gunakan tautan dan halaman pada lembar Sumber untuk menelusuri dokumen asal.
+
+Arsip PDF menggunakan **Git LFS** karena ukurannya melebihi batas berkas Git biasa. Jika mengkloning repositori, jalankan `git lfs pull`. Unduhan ZIP kode sumber yang dibuat GitHub tidak selalu menyertakan objek LFS.
+
+Dokumentasi: [Git LFS](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-git-large-file-storage).
+
 ## Tabel Overview
 
 **[Unduh file Overview.xlsx](https://github.com/TegarReskiPratama/Dataset-Narkotika_215/raw/refs/heads/main/Overview/Overview.xlsx)**
@@ -106,39 +137,3 @@ Seluruh isi lembar Overview ditampilkan pada tabel berikut. Data diambil langsun
 
 Tampilan Excel menggunakan **Times New Roman**, latar putih, garis tabel hitam, judul kolom tebal di tengah, dan isi rata atas. Rincian halaman serta URL sumber tersedia pada lembar **Sumber** dalam Excel.
 
-## Sumber dan pengolahan
-
-1. Dokumen sumber: [Direktori Putusan Mahkamah Agung RI](https://putusan3.mahkamahagung.go.id/). URL setiap perkara diekstrak dari QR pada PDF.
-2. Teks PDF diekstrak langsung untuk 32 berkas; 18 berkas gambar dibaca menggunakan OCR.
-3. Amar akhir 50 perkara dicocokkan melalui [SIPP PN Pontianak](https://sipp.pn-pontianak.go.id/) menggunakan nomor putusan yang sesuai.
-4. Kolom Barang Bukti diambil dari daftar dalam amar hakim, sehingga tidak mencampurkan barang pada tuntutan atau perkara lain.
-5. Spasi dan pemisah paragraf dirapikan. Rincian daftar barang bukti serta butir amar dipertahankan; daftar panjang tetap disertakan.
-
-PDF sumber tetap menjadi acuan naskah lengkap. Ketidakkonsistenan angka atau redaksi yang memang terdapat pada sumber tidak diganti berdasarkan perkiraan. Catatan per perkara tersedia di [Sumber_Putusan.md](Dokumentasi/Sumber_Putusan.md).
-
-## Integritas arsip
-
-- Jumlah: **50 PDF unik**.
-- Ukuran: **303.08 MB**.
-- Pemeriksaan CRC arsip dan kecocokan SHA-256 tiap PDF dengan dokumen asal telah dilakukan.
-- SHA-256 `Dataset/Narkotika.zip`:
-
-```text
-e6c5ad0cd3344951034bf6ed2746d6676e35a572ea7c29cf3073f4ce421cf457
-```
-
-## Cara mengunduh
-
-1. Buka [Dataset/Narkotika.zip](Dataset/Narkotika.zip) dan gunakan tombol unduh berkas untuk memperoleh arsip PDF asli.
-2. Ekstrak arsip, lalu cocokkan nomor perkara dengan tabel Excel.
-3. Gunakan tautan dan halaman pada lembar Sumber untuk menelusuri dokumen asal.
-
-Arsip PDF menggunakan **Git LFS** karena ukurannya melebihi batas berkas Git biasa. Jika mengkloning repositori, jalankan `git lfs pull`. Unduhan ZIP kode sumber yang dibuat GitHub tidak selalu menyertakan objek LFS.
-
-Dokumentasi: [Git LFS](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-git-large-file-storage).
-
-## Pengumpulan
-
-Hyperlink repositori: https://github.com/TegarReskiPratama/Dataset-Narkotika_215
-
-Nama repositori menggunakan tiga digit terakhir NIM penyusun, yaitu `215`. Gunakan hyperlink repositori untuk pengumpulan melalui LMS sesuai arahan dosen.
